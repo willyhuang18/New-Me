@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS personal_db;
+CREATE DATABASE personal_db;
