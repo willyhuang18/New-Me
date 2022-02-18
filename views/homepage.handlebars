@@ -1,3 +1,45 @@
+<section class="container flex" id="about">
+    <h2 class="text-center" data-aos="zoom-in-down" data-aos-duration="3000">About</h2>
+      <div class="row " data-aos="flip-left" data-aos-duration="3000" >
+        <img class="rounded img-thumbnail " src="./img/me.jpg" alt="willy" width="550" height="500">
+        <div class="col">
+          <h4 class="text-center">Who is this person?</h4>
+          <div class="text" data-aos="zoom-out-up" data-aos-duration="3000">My name is PangTa, I am learning coding in UCB-Bootcamp.
+            <br>
+            Fresh Start but Getting used to it. I having passion for creating website and learning something new.
+            <br>
+            <a href="#contact">Want to do something cool together?</a> 
+        </div>
+        <br>
+          <!-- icon for the personality -->
+          <div class=" row d-flex flex-wrap" >
+            <!-- adding progress bar -->
+            <div class="container ">
+              <div class="tag bg-warning rounded" data-aos="fade-down">CSS</div>
+              <div class="progress my-2 progress-value" style="height: 20px;"data-aos="fade-right" >
+                <div class="progress-bar " role="progressbar" style="width: 50%;" aria-valuenow="50" 
+                aria-valuemin="0" aria-valuemax="100">50%</div>
+              </div>
+              <div class=" tag bg-warning rounded" data-aos="fade-down">HTML</div>
+              <div class="progress  my-2 progress-value" style="height: 20px;" data-aos="fade-right">
+                <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" 
+                aria-valuemin="0" aria-valuemax="100">50%</div>
+              </div>
+              <div class="tag bg-warning rounded" data-aos="fade-down">JavaScript</div>
+              <div class="progress  my-2 progress-value" style="height: 20px;" data-aos="fade-right">
+                <div class="progress-bar" role="progressbar" style="width: 60%;" aria-valuenow="25" 
+                aria-valuemin="0" aria-valuemax ="100">60%</div>
+              </div>
+              <div class="tag bg-warning rounded" data-aos="fade-down">React</div>
+              <div class="progress  my-2 progress-value" style="height: 20px;" data-aos="fade-right">
+                <div class="progress-bar" role="progressbar"  style="width: 10%;" aria-valuenow="10" 
+                aria-valuemin="0" aria-valuemax="100">10%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
 <section class="container flex" id="project">
   <div class="row container flex flex-wrap" >
 
@@ -5,7 +47,7 @@
       <div class="shadow-lg bg-body mx-3" data-aos="zoom-out-down"
             data-aos-duration="3000" style="width: 18rem;">
         <div class="rotate text-center">
-            <figure><a href=""><img src="" class="card-img-top" alt="..."></a></figure>
+            <figure><a href="{{project.url}}"><img src="{{project.image}}" class="card-img-top" alt="..."></a></figure>
         </div> 
         <div class="card-title">
           <h5 class="card-title text-center">{{project.name}}</h5>
