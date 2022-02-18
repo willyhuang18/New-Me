@@ -161,7 +161,10 @@ a:hover{
 margin-left: 19rem;
 }
 p{
-font-size: larger;
+  font-family: 'Roboto', sans-serif;
+  font-size: larger;
+  text-align: center;
+  font-weight: bold;
 }
 footer{
 background-color: #b6d5e783;
