@@ -44,6 +44,9 @@ div.sticky {
   font-size: 20px;
 }
 
+nav a{
+  color: #fff;
+}
 #section2{
   z-index:80;
 }
