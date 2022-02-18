@@ -1,3 +1,12 @@
+:root{
+  --main-color:#443;
+  --border-radius:95% 4% 97% 5%/4% 94% 3% 95%;
+  --border-radius-hover:4% 95% 6% 95%/95% 4% 92% 5%;
+  --border:.2rem solid var(--main-color);
+  --border-hover:.2rem dashed var(--main-color);
+  --background: #fff;
+  --dark: #34314C;
+}
 body{
   height: 2000px;  
   background: #7f7fd5;
@@ -163,9 +172,90 @@ margin-left: 19rem;
 p{
   font-family: 'Roboto', sans-serif;
   font-size: larger;
-  text-align: center;
+   text-align: center;
   font-weight: bold;
 }
 footer{
 background-color: #b6d5e783;
 }
+.book form{
+  margin:0 auto 2rem auto;
+  max-width: 60rem;
+  border-radius: var(--border-radius-hover);
+  padding:3rem;
+  border:var(--border);
+}
+
+.book form .box{
+  width:100%;
+  padding:1rem 1.2rem;
+  border-radius: .5rem;
+  font-size: 1.6rem;
+  text-transform: none;
+  color:var(--main-color);
+  border:var(--border);
+  margin:.7rem 0;
+}
+
+.book form .box:focus{
+  border:var(--border-hover);
+}
+
+
+.book a {
+  position: relative;
+  padding: 20px 50px;
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  border-radius: 40px;
+}
+
+.book  a span {
+  position: relative;
+  color: #fff;
+  font-family: Arial;
+  letter-spacing: 3px;
+  z-index: 1;
+}
+.book a .liquid {
+  top: -80px;
+  left: 0;
+  background: #6F4E37;
+  box-shadow: inset 0 0 50px rgba(119, 102, 102, 0.5);
+  transition: .5s;
+}
+
+.book a .liquid::after,
+.book a .liquid::before {
+  content: '';
+  width: 100%;
+  height: 300%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -75%);
+  background: rgb(90, 81, 81);
+}
+
+.book a .liquid::before {
+  
+  border-radius: 45%;
+  background: rgb(116, 96, 96);
+  animation: animate 5s linear infinite;
+}
+
+.book a .liquid::after {
+  
+  border-radius: 40%;
+  background: rgba(20, 20, 20, .5);
+  animation: animate 10s linear infinite;
+}
+
+.book a:hover .liquid{
+  top: -120px;
+}
+
+@keyframes spin {
+  
