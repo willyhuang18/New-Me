@@ -18,11 +18,12 @@ Project.init(
     description: {
       type: DataTypes.STRING,
     },
-    date_created: {
-      type: DataTypes.DATE,
-      allowNull: false,
-      defaultValue: DataTypes.NOW,
+    url:{
+      type:DataTypes.STRING
     },
+    image:{
+      type:DataTypes.STRING
+    }
   },
   {
     sequelize,
