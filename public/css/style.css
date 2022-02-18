@@ -1,117 +1,168 @@
+body{
+  height: 4500px;  
+  background: #7f7fd5;
+  background: linear-gradient(to right, #91eae4, #86a8e7, #7f7fd5);
+  overflow-x: hidden;
+}
+
 #myVideo {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-  }
-  
-  /* Add some content at the bottom of the video/page */
-  .content {
-    position: fixed;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    color: #f1f1f1;
-    width: 100%;
-    padding: 20px;
-  }
-
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@900&display=swap');
-
-header {
-  height: 200vh;
+ object-fit: cover;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
 }
 
-.container {
-  /* hide fixed overflow contents */
-  clip: rect(0, auto, auto, 0);
-
-  /* does not work if overflow = visible */
-  overflow: hidden;
-
-  /* only works with absolute positioning */
-  position: absolute;
-
-  /* Make sure containers are full-width and height */
-  height: 100vh;
-  left: 0;
-  width: 100%;
-  
-  
-  /* safari hack */
-  -webkit-mask-image: -webkit-linear-gradient(top, #ffffff 0%,#ffffff 100%);
-}
-
-.container_solid {
-  background: white;
-  
-  /* position this container at the top of its parent element */
-  top: 0;
-}
-
-.title_wrapper {
+/* Add some content at the bottom of the video/page */
+.content {
   position: fixed;
-  display: block;  
-  margin: auto;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
   width: 100%;
-  /* center the text wrapper vertically */
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
+  padding: 20px;
 }
 
-.title_wrapper h1 {
-  text-align: center;
-  font-size: 64px;
-  text-transform: uppercase;
-  text-align: center;
-  font-family: 'Fraunces', serif;
-  font-weight: 900;
+
+div.sticky {
+  position: sticky;
+  background-color: rgb(207, 207, 194);
+  padding: 20px;
+  font-size: 20px;
 }
 
-.container_solid .title_wrapper h1 {
-  /* the text background */
-  background: url(https://images.unsplash.com/photo-1575058752200-a9d6c0f41945?&q=85);
-  background-size: 100vw auto;
-  background-position: center;
-  
-  /* clip the text is possible */
-  text-fill-color: transparent;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
-  
-  /* fallback text color */
-  color: black;
+#section2{
+  z-index: 9999;
 }
 
-.container_image {
-  /* Grab a free image from unsplash */
-  background-image: url(https://images.unsplash.com/photo-1575058752200-a9d6c0f41945?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
-  background-size:100vw auto;
-  background-position: center;
-  background-attachment: fixed;
-  
-  /* position the second container below the first container */
-  top: 100vh;
+
+.start{
+  position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Luxurious Roman', cursive;;
 }
 
-.container_image .title_wrapper h1 {
+span,
+h4,
+h5{
+  font-family: 'Lora', serif;
+}
+
+
+
+div.sticky {
+  position: sticky;
+  top: 0;
+  background-color: rgb(207, 207, 194);
+  padding: 20px;
+  font-size: 20px;
+}
+
+#section2{
+  z-index: 80;
+}
+
+section{
+  line-height: 18pt;
+  padding: 100px 0 130px 0;;
+}
+
+h2,
+h6{
+  text-decoration: underline;
+  font-weight: bold;
+  font-size: 50px;
+  font-family: 'Luxurious Roman', cursive;
+  padding-bottom: 25px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
   color: white;
+  text-decoration: none !important;
+}
+a:hover{
+  color:black;
 }
 
-section {
-  min-height: 100vh;
-  padding: 2em;
-  margin: auto;
-  max-width: 800px;
+.word{
+  font-family: 'Lora', serif;
+  font-size: large;
+  color: rgb(139, 66, 66);
 }
 
-section h2 {
-  font-family: 'Fraunces', serif;
+.tag{
+  display: inline-block;
+  font-family: 'Lora', serif;
+  font-size: large;
+  color: rgb(139, 66, 66);
 }
 
-section p {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+.progress-value {
+  animation: load 3s normal forwards;
+}
+
+@keyframes load {
+  0% { width: 0; }
+  100% { width: 100% }
+}
+.text{
+  font-family: 'Roboto', sans-serif;
+  font-size: larger;
+  height: 5rem;
+  text-align: center;
+  font-weight: bold;
+}
+.rotate figure:hover img{
+  -webkit-transform: scale(1.3);
+   transform: scale(1.3);
+}
+
+.rotate figure img {
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+
+.info{
+  position: relative;
+  padding: 0.75rem 1.25rem;
+  transition: all 200ms ease-in-out;
+}
+
+.blogTag{
+  width: 60px;
+  max-width: 100px;
+  padding: 0.2rem 0.5rem;
+  font-size: 12px;
+  text-align: center;
+  text-transform: uppercase;
+  background: #36b37e;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.title{
+    font-size: 1.5rem;
+    padding-bottom: 0.75rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.about{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+}
+.card{
+margin-left: 19rem;
+}
+p{
+font-size: larger;
+}
+footer{
+background-color: #b6d5e783;
 }
